@@ -1,0 +1,53 @@
+//求两个数的较大值
+#include <stdio.h>
+
+//第一种  常规
+//int main() {
+//	int a;
+//	int b;
+//	scanf("%d%d", &a, &b);
+//
+//	if (a > b)
+//		printf("较大值是:%d\n", a);
+//	else
+//		printf("较大值是:%d\n", b);
+//	return 0;
+//} //主函数直接计算模式
+
+//第二种 使用三木操作符
+//int main() {
+//	int a;
+//	int b;
+//	int max = 0;
+//	scanf("%d%d", &a, &b);
+//	max = (a > b ? a : b); //问号前为选项，若为真则执行中间，为假则执行后面
+//	return max;
+//}
+
+
+
+//第三种  调用函数模式
+//int Max(int x, int y) {
+//	int max = (x > y ? x : y);
+//	return max;
+//}
+//
+//int main() {
+//	int a;
+//	int b;
+//	int max = 0;
+//	scanf("%d%d", &a, &b);
+//	max = Max(a, b); //问号前为选项，若为真则执行中间，为假则执行后面
+//	return max;
+//}
+
+//第四种 宏定义模式
+#define MAX(X,Y) (X>Y?X:Y)
+int main() {
+	int a;
+	int b;
+	int max = 0;
+	scanf("%d%d", &a, &b);
+	max = MAX(a, b); //问号前为选项，若为真则执行中间，为假则执行后面
+	return max;
+}
